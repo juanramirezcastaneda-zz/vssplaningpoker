@@ -1,0 +1,9 @@
+.card-item{
+    background-color: #0466D2;
+    border-radius: 5px;
+    border-width: medium;
+    color: white;
+    margin: 0.5em;
+    padding: 2em;
+    text-align: center;
+}
