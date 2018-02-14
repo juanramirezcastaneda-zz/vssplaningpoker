@@ -4,6 +4,7 @@
     border-width: medium;
     color: white;
     margin: 0.5em;
-    padding: 2em;
+    padding: 2.5em 1.5em;
     text-align: center;
+    min-width: 32px;
 }
