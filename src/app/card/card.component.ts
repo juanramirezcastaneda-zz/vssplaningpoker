@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ICard } from './card.model';
 
 @Component({
   selector: 'app-card',
@@ -9,8 +10,18 @@ export class CardComponent implements OnInit {
 
   constructor() { }
 
-  textValue = '1';
+  card: ICard = {
+    displayValue: 'One',
+    value: '1'
+  };
 
   ngOnInit() {
+  }
+
+  setCardValue() {
+    this.card = {
+      displayValue: 'Fake',
+      value: 'FakeValue'
+    };
   }
 }
