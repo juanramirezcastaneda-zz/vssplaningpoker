@@ -11,6 +11,7 @@ import { ICard } from './card/card.model';
 export class AppComponent implements OnInit {
   title = 'app';
   cards: ICard[] = null;
+  selectedValue = '';
 
   constructor(private cardService: CardService) { }
   ngOnInit(): void {

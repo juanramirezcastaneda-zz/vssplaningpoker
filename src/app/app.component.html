@@ -2,9 +2,10 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <div>The selected value is: {{ selectedValue }}</div>
   <div class="flex-container">
     <div *ngFor="let card of cards">
-        <app-card [card]="card"></app-card>
+        <app-card [card]="card" [(selectedValue)]="selectedValue"></app-card>
     </div>    
   </div>
 </div>
