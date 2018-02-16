@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { ICard } from './card.model';
 
 @Component({
@@ -8,20 +8,16 @@ import { ICard } from './card.model';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  @Input('card') card: ICard;
+  @Input('selectedValue') selectedValue: string;
+  @Output() selectedValueChange = new EventEmitter<string>();
 
-  card: ICard = {
-    displayValue: 'One',
-    value: '1'
-  };
+  constructor() { }
 
   ngOnInit() {
   }
 
   setCardValue() {
-    this.card = {
-      displayValue: 'Fake',
-      value: 'FakeValue'
-    };
+    this.selectedValueChange.emit(this.card.displayValue);
   }
 }
